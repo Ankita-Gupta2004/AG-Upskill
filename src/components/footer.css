@@ -1,0 +1,149 @@
+/* footer.css */
+
+.footer {
+  background-color: #060411;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.logo-foot {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  
+}
+
+.logo-foot img {
+  width: 100px;
+  height: 100px;
+   border: 2px solid #d8cdc4;
+   border-radius: 50px;
+  object-fit: contain;
+}
+.foot-heading{
+    line-height: 50px;
+}
+.logo-foot h6 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d8cdc4;
+  margin-top: 0px;
+}
+
+.footer > h2 {
+  flex-basis: 100%;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f0a500;
+  border-bottom: 2px solid #f0a500;
+  padding-bottom: 5px;
+}
+
+.footer-text {
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #f0e9e9;
+  text-align: justify;
+}
+
+.footer-list,
+.footer-follow-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li,
+.footer-follow-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list li a,
+.footer-follow-list li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a:hover,
+.footer-follow-list li a:hover {
+  color: #f0a500;
+}
+
+.footer-follow-list li a .follow-icon {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-follow-list li a:hover .follow-icon {
+  color: #f0a500;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #5a5959;
+  font-size: 0.9rem;
+  color: #979797;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer > h2 {
+    font-size: 1rem;
+  }
+
+  .footer-section {
+    flex-basis: 100%;
+    min-width: auto;
+  }
+}
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.link-button:hover {
+  color: #f0a500;
+}

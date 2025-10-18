@@ -1,0 +1,130 @@
+/* lab.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #efeeef;
+}
+
+/* Main Lab Section */
+.lab-Manual {
+  padding: 50px 5%;
+  position: relative;
+  z-index: 1;
+  color: #f5f5f5;
+  overflow: hidden;
+  /* border-radius: 20px; */
+}
+
+/* Dark Blue to Orange Gradient Background */
+.lab-Manual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(135deg, rgb(14, 5, 5), rgb(39, 44, 90), #ff6e40); /* Dark blue to orange */
+}
+
+/* Dotted Overlay with Animation */
+.lab-Manual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(ellipse, rgb(255, 255, 255) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: move 20s linear infinite;
+  opacity: 0.15;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Dot Movement Animation */
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Section Heading */
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  color: #bebff7;
+  font-size: 1.1rem;
+}
+
+/* Lab Cards Container: 2 per row on desktop */
+.lab-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual Lab Card */
+.lab-style {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 180px;
+}
+
+.lab-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lab-style h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.lab-style p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Button aligned to bottom-right */
+.lab-btn-style {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+
+.lab-btn {
+  background-color: #30c28e;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.lab-btn:hover {
+  background-color: #1c8560;
+}

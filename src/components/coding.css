@@ -1,0 +1,87 @@
+/* coding.css */
+
+.coding-container {
+  width: 100%;
+  min-height: 100vh; /* or 100% if inside another container */
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #180616, #180616, #8e3887);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #d2d2d2;
+}
+
+
+.code-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.code-heading h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #e4dfdf;
+}
+
+.code-heading p {
+  color: #7e6185;
+  font-size: 1.1rem;
+}
+
+.coding-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Card styles */
+.code-style {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.code-style:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.code-style h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #040506;
+  font-weight: 700;
+}
+
+.code-style p {
+  flex-grow: 1;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.code-btn-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.code-btn {
+  background-color: #56da98;
+  color: white;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.code-btn:hover {
+  background-color: #2a8658;
+}

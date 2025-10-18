@@ -1,0 +1,58 @@
+.privacy-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  font-family: "Segoe UI", sans-serif;
+  color: #0c0510;
+  background: linear-gradient(
+    135deg,
+    rgb(125, 90, 146),
+    rgb(255, 255, 255),
+    #1a0430
+  );
+}
+
+.privacy-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #26102e;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #371643;
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+  color: #161515;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #51266e;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #865fab;
+}

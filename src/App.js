@@ -1,24 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
+import Header from "./components/header";
+import Hero from "./components/hero";
+import Cards from "./components/cards";
+import Notes from "./components/notes";
+import Testimonial from "./components/testimonial";
+import Lab from "./components/lab";
+import Footer from "./components/footer";
+import Coding from "./components/coding";
+import SubjectDetails from "./components/subjectDetails";
+import About from "./components/About";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import DashBoard from "./components/DashBoard";
 
 function App() {
+  const notesRef = useRef(null);
+  
+
+  const scrollToNotes = () => {
+    notesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header onStartClick={scrollToNotes} />
+
+      <Routes>
+        {/* Home Route */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero onStartClick={scrollToNotes} />
+              <Cards onStartClick={scrollToNotes} />
+              <Notes ref={notesRef} />
+              <Lab />
+              <Coding />
+              <Testimonial />
+              <Footer onStartClick={scrollToNotes} />
+            </>
+          }
+        />
+        <Route path="/dashboard" element={<DashBoard />} />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+        {/* Subject Detail Page Route */}
+        <Route path="/subject/:subjectNaame" element={<SubjectDetails />} />
+      </Routes>
+    </Router>
   );
 }
 

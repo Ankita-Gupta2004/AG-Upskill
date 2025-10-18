@@ -1,0 +1,63 @@
+.about-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  font-family: "Segoe UI", sans-serif;
+  color: #170a20;
+  background: linear-gradient(
+    135deg,
+    rgb(125, 90, 146),
+    rgb(255, 255, 255),
+    #1a0430
+  ); 
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #363535;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #371643;
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+  color: #262424;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.external-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #51266e;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.external-link:hover {
+  color: #865fab;
+}

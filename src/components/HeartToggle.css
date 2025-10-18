@@ -1,0 +1,10 @@
+.heart-icon {
+  cursor: pointer;
+  font-size: 22px;
+  color: gray;
+  transition: transform 0.2s ease-in-out;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+}

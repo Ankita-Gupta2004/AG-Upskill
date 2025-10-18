@@ -1,0 +1,65 @@
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Fix position of popup */
+.popup-box {
+  position: absolute;
+  top: 100%; /* show it below the icons, or adjust if needed */
+  right: 0;  /* aligned to the right of the card */
+  transform: translateX(100%); /* shift to the right of the entire card */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  z-index: 100;
+  min-width: 120px;
+}
+
+.popup-box p {
+  margin: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup-box p:hover {
+  background-color: #eee;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-popup {
+  background-color: white;
+  padding: 0;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
