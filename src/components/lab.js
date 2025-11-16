@@ -1,7 +1,6 @@
 import "./lab.css";
 // import { openPdf } from "../utils/pdfUtils";
-import { useState } from "react";
-import AuthModal from "./AuthModal";
+
 import HeartToggle from "./HeartToggle"; // adjust path if needed
 
 const labContent = [
@@ -56,15 +55,8 @@ const labContent = [
 ];
 
 function Lab() {
-  const [showModal, setShowModal] = useState(false);
 
-  const handleLabClick = (labTitle) => {
-    setShowModal(true); // Open modal on button click
-  };
-
-  // const handleLabClick = (labTitle) => {
-  //   openPdf(labTitle, "Manual"); // or just labTitle if that's how your files are named
-  // };
+  
   return (
     <div className="lab-Manual">
       <div className="heading">
@@ -82,7 +74,7 @@ function Lab() {
             <div className="lab-btn-style">
               <HeartToggle />
 
-              <button className="lab-btn" onClick={() => handleLabClick(title)}>
+              <button className="lab-btn">
                 Click
               </button>
             </div>
@@ -90,7 +82,6 @@ function Lab() {
         ))}
       </div>
 
-      {showModal && <AuthModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./testimonial.css";
-import AuthModal from "./AuthModal";
+
 
 const testimonials = [
   {
@@ -92,7 +92,6 @@ function Testimonial() {
         </button>
         <button className="review-add-style" onClick={() => handleClick()}>Comment</button> {/* Moved here */}
       </div>
-      {showModal && <AuthModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

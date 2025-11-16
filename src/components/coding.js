@@ -1,6 +1,5 @@
 import "./coding.css";
 // import { openPdf } from "../utils/pdfUtils";
-import AuthModal from "./AuthModal";
 import { useState } from "react";
 import HeartToggle from "./HeartToggle";
 
@@ -33,13 +32,8 @@ const codeContent = [
 ];
 
 function Coding() {
-  const [showModal, setShowModal] = useState(false);
 
-  const handleClick = (title) => {
-    setShowModal("login"); // Show create account modal by default
-
-    // openPdf(title, "notes");
-  };
+  
   return (
     <div className="coding-container" id="codecraft-section">
       <div className="code-heading">
@@ -56,14 +50,14 @@ function Coding() {
             <div className="code-btn-style">
               <HeartToggle />
 
-              <button className="code-btn" onClick={() => handleClick(title)}>
+              <button className="code-btn">
                 Explore
               </button>
             </div>
           </div>
         ))}
       </div>
-      {showModal && <AuthModal onClose={() => setShowModal(false)} />}
+      
     </div>
   );
 }
