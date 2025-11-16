@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaUserCircle, FaBars } from "react-icons/fa";
+import {  FaBars } from "react-icons/fa";
 import "./header.css";
 
 function Header({ onStartClick, onCodeClick }) {
-  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const goToDashboard = () => {
-    navigate("/dashboard");
-  };
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -54,9 +48,7 @@ function Header({ onStartClick, onCodeClick }) {
                 CodeCraft
               </a>
             </li>
-            <li>
-              <FaUserCircle className="account-icon" onClick={goToDashboard} />
-            </li>
+            
           </ul>
         </nav>
       </header>

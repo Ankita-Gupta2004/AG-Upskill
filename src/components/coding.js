@@ -1,5 +1,4 @@
 import "./coding.css";
-// import { openPdf } from "../utils/pdfUtils";
 import { useState } from "react";
 import HeartToggle from "./HeartToggle";
 
