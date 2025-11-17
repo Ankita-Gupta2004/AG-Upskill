@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./testimonial.css";
-
 
 const testimonials = [
   {
@@ -35,9 +34,9 @@ const testimonials = [
   },
 ];
 
-function TestimonialCard({ text, author, img }) {
+function TestimonialCard({ text, author, img, fade }) {
   return (
-    <div className="review-card">
+    <div className={`review-card fade-animation ${fade ? "fade-in" : ""}`}>
       <p>"{text}"</p>
 
       <div className="author-info">
@@ -49,24 +48,38 @@ function TestimonialCard({ text, author, img }) {
 }
 
 function Testimonial() {
-  const [showModal, setShowModal] = useState(false);
-
   const [index, setIndex] = useState(0);
-
-  const prevTestimonial = () => {
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+  const [fade, setFade] = useState(false);
 
   const nextTestimonial = () => {
-    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setFade(false);
+    setTimeout(() => {
+      setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+      setFade(true);
+    }, 100);
   };
-  const handleClick = () => {
-    setShowModal("login"); // Show create account modal by default
 
-    // openPdf(title, "notes");
+  const prevTestimonial = () => {
+    setFade(false);
+    setTimeout(() => {
+      setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+      setFade(true);
+    }, 100);
   };
+
+  // Auto-slide every 3 seconds
+  useEffect(() => {
+    setFade(true);
+    const timer = setInterval(() => {
+      nextTestimonial();
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [index]);
+
   return (
     <div className="testimonial-container">
+
       <div className="headings-container">
         <span className="ist-heading">
           <h3>See what students say</h3>
@@ -80,17 +93,12 @@ function Testimonial() {
       </div>
 
       <div className="testimonail-card-style">
-              <TestimonialCard {...testimonials[index]} />
-
+        <TestimonialCard {...testimonials[index]} fade={fade} />
       </div>
+
       <div className="buttons">
-        <button onClick={prevTestimonial}>
-          <b>&lt;</b>
-        </button>
-        <button onClick={nextTestimonial}>
-          <b>&gt;</b>
-        </button>
-        <button className="review-add-style" onClick={() => handleClick()}>Comment</button> {/* Moved here */}
+        <button onClick={prevTestimonial}><b>&lt;</b></button>
+        <button onClick={nextTestimonial}><b>&gt;</b></button>
       </div>
     </div>
   );
