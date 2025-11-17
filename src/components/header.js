@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import "./header.css";
+import { CircleCheckBig  } from "lucide-react";
 
 function Header({ onStartClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +62,9 @@ function Header({ onStartClick }) {
               )}
             </li>
             <li>
-              <a href="/pending-tasks">To do list</a>
+              <a href="/pending-tasks" className="nav-icon-link">
+                <CircleCheckBig  size={20} />
+              </a>
             </li>
           </ul>
         </nav>

@@ -4,7 +4,7 @@ const cardData = [
   {
     title: "Code Playground",
     description: "Test your coding skills. Click to open coding playground.",
-    action: () => window.location.href = "/code-here",
+    action: () => window.location.href = "/codingPlatform",
   },
   {
     title: "Create Your resume",
