@@ -12,6 +12,7 @@ import SubjectDetails from "./components/subjectDetails";
 import About from "./components/About";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Planner from "./components/ToDo/Planner";
+import CodingPlatform from "./components/CodingPlatform/CodingPlatform";
 
 function App() {
   const notesRef = useRef(null);
@@ -47,6 +48,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         
         <Route path="/pending-tasks" element={<Planner />} />
+        <Route path="/codingPlatform" element={<CodingPlatform />} />
 
 
         {/* Subject Detail Page Route */}

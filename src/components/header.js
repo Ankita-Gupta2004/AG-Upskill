@@ -40,7 +40,7 @@ function Header({ onStartClick }) {
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/playground">Playground</a>
+              <a href="/codingPlatform">Playground</a>
             </li>
             <li className="dropdown">
               <span onClick={toggleTools} className="dropdown-title">

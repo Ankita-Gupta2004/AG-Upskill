@@ -1,0 +1,315 @@
+/* Midnight Purple theme - pure CSS, no :root or variables */
+
+/* page background with slow gradient animation */
+.cp-wrap {
+  margin: 0;
+  padding: 0;
+  height: 710px;
+  background: linear-gradient(
+    120deg,
+    #0b0710 0%,
+    #12061a 35%,
+    #1a0830 60%,
+    #0f0410 100%
+  );
+  font-family: "Fira Code", Consolas, monospace;
+  color: #eae6ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* subtle moving background shapes */
+.cp-wrap::before,
+.cp-wrap::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  width: 650px;
+  height: 650px;
+  top: -200px;
+  right: -250px;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(105, 70, 229, 0.18),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(39, 195, 109, 0.08),
+      transparent 25%
+    );
+  filter: blur(40px);
+  transform: rotate(20deg);
+  animation: floaty 8s ease-in-out infinite;
+  pointer-events: none;
+}
+.cp-wrap::after {
+  left: -300px;
+  top: -220px;
+  right: auto;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(39, 195, 109, 0.08),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(105, 70, 229, 0.12),
+      transparent 25%
+    );
+  filter: blur(60px);
+  animation-duration: 11s;
+}
+
+/* top bar */
+.cp-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+/* brand */
+.cp-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #fff;
+}
+.glow-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6b4df0;
+  box-shadow: 0 0 10px #4df06b, 0 0 24px rgba(107, 77, 240, 0.18);
+  transform: translateZ(0);
+  animation: pulse 2s infinite;
+}
+
+/* controls */
+.cp-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Modern Dropdown */
+.cp-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(6px);
+  color: #f0eaff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+.cp-select:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.cp-select option {
+  background: #12061a !important;
+  color: #eae6ff !important;
+  padding: 12px;
+}
+
+/* run button */
+.cp-run {
+  padding: 9px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, #31d37f, #0fb06b);
+  color: #04140b;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(49, 211, 127, 0.14);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.cp-run:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(49, 211, 127, 0.22);
+}
+
+/* main area split — FULL HEIGHT FINAL VERSION */
+.cp-main {
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  height: calc(100vh - 78px) !important;
+  z-index: 2;
+}
+
+/* editor full height */
+.cp-editor {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* output full height */
+.cp-output-title {
+  margin-bottom: 8px;
+}
+.cp-output {
+  margin-top: 10px;
+  flex: 0.9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* dual editor layout for HTML/CSS */
+.cp-dual {
+  display: flex;
+  gap: 12px;
+  height: 100%;
+}
+
+/* force block + textarea full height */
+.cp-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+/* full-height textarea */
+.cp-textarea {
+  flex: 1 1 auto;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  resize: none;
+
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgb(61, 25, 111);
+  background: linear-gradient(
+    180deg,
+    rgba(7, 6, 12, 0.9),
+    rgba(18, 9, 30, 0.9)
+  );
+  color: #f7f3ff;
+  font-family: "Fira Code", Consolas, monospace;
+  font-size: 13.6px;
+  line-height: 1.6;
+  overflow: auto;
+}
+.cp-textarea:focus {
+  outline: none !important;
+}
+
+.cp-textarea:focus {
+  box-shadow: 0 0 26px rgba(107, 77, 240, 0.14),
+    inset 0 -12px 36px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(107, 77, 240, 0.75);
+}
+
+/* output area */
+.cp-output-pre {
+  flex: 1;
+  height: 100% !important;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 10, 0.9),
+    rgba(8, 5, 14, 0.95)
+  );
+  border-radius: 12px;
+  padding: 14px;
+  color: #b6ffcf;
+  font-family: "Fira Code", monospace;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: auto;
+}
+
+/* iframe preview */
+.cp-preview {
+  flex: 1;
+  height: 100% !important;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* responsive */
+@media (max-width: 920px) {
+  .cp-main {
+    flex-direction: column;
+    height: auto;
+  }
+  .cp-output {
+    order: 2;
+  }
+  .cp-editor {
+    order: 1;
+  }
+}
+
+/* animations */
+@keyframes floaty {
+  0% {
+    transform: translateY(0) rotate(20deg) scale(1);
+  }
+  50% {
+    transform: translateY(12px) rotate(22deg) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) rotate(20deg) scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Fix full-height layout */
+.cp-single {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cp-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.cp-block-title {
+  padding: 8px 4px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+  color: #cfc8ff;
+}
+.cp-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  gap: 12px; /* <-- REAL SPACING FIX */
+}
+
+.cp-textarea {
+  padding-bottom: 22px !important; /* extra inside spacing */
+}
