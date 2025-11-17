@@ -23,7 +23,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: linear-gradient(135deg, rgb(14, 5, 5), rgb(39, 44, 90), #ff6e40); /* Dark blue to orange */
+  background: linear-gradient(135deg, rgb(14, 5, 5), rgb(9, 12, 36), #0f082d); /* Dark blue to orange */
 }
 
 /* Dotted Overlay with Animation */
