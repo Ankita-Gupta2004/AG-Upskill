@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./CodingPlatform.css";
 import axios from "axios";
+import Footer from "../footer";
 
 const BOILERPLATE = {
   javascript: `// JavaScript (Node / Browser)\n\nfunction main() {\n    console.log(\"Hello World\");\n}\n\nmain();\n`,
@@ -303,6 +304,7 @@ export default function CodingPlatform() {
           )}
         </div>
       </div>
+      
     </div>
   );
 }

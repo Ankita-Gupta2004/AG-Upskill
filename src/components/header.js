@@ -37,9 +37,7 @@ function Header({ onStartClick }) {
                 Notes
               </a>
             </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
+            
             <li>
               <a href="/codingPlatform">Playground</a>
             </li>
