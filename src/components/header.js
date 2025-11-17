@@ -60,6 +60,9 @@ function Header({ onStartClick }) {
                 </ul>
               )}
             </li>
+            <li>
+              <a href="/pending-tasks">To do list</a>
+            </li>
           </ul>
         </nav>
       </div>

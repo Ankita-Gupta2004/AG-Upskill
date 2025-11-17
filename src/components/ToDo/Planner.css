@@ -1,0 +1,186 @@
+.pws-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Side */
+.pws-left {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pws-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pws-input-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pws-input,
+.pws-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  flex: 1;
+}
+
+.pws-btn {
+  padding: 10px 20px;
+  background: #27c36d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pws-task-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pws-task-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.pws-completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.pws-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4d4d;
+}
+
+.pws-progress-container {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  height: 20px;
+}
+
+.pws-progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff6a00, #2ce4c5, #15ef0d);
+  transition: width 0.3s;
+}
+
+.pws-progress-text {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #252020;
+}
+
+.pws-notes-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.pws-note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pws-note-item {
+  margin-top: 5px;
+  background: #dff8e3;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+/* Right Side */
+.pws-right {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* Water Intake */
+.pws-water-intake {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pws-glasses {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.pws-glass {
+  position: relative;
+  width: 40px;
+  height: 70px;
+  border: 2px solid #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #f0f4f8;
+  transition: transform 0.2s;
+}
+
+.pws-glass:hover {
+  transform: scale(1.1);
+}
+
+.pws-water {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(180deg, #22c55e, #27b3e1);
+  transition: height 0.4s ease-in-out;
+  border-radius: 0 0 8px 8px;
+}
+
+.pws-filled .pws-water {
+  height: 100%;
+}
+
+.pws-glass-number {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: #27c36d;
+}

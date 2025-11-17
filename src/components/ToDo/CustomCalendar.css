@@ -1,0 +1,74 @@
+.cc-container {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.cc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cc-header button {
+   
+  background: #27c36d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cc-weekdays {
+  display: flex;
+}
+
+.cc-weekday {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.cc-days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cc-day {
+  width: calc(100% / 7);
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cc-day:hover {
+    border-radius: 50%;
+  background: #80feb8;
+  color: #0b1c04;
+}
+
+.cc-today {
+  border: 2px solid #ffffff;
+  font-weight: bold;
+}
+
+.cc-selected {
+    border-radius: 50%;
+  background: #15bd66;
+  color: #fff;
+}
+
+.cc-empty {
+  background: transparent;
+  cursor: default;
+}
