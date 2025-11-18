@@ -32,11 +32,7 @@ function Header({ onStartClick }) {
             <li>
               <a href="/">Home</a>
             </li>
-            <li>
-              <a href="#" onClick={onStartClick}>
-                Notes
-              </a>
-            </li>
+            
             
             <li>
               <a href="/codingPlatform">Playground</a>

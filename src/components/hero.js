@@ -9,7 +9,7 @@ function Hero( { onStartClick }) {
       </div>
       <div className="getStarted-btn">
         <button onClick={onStartClick}className="main-btn">
-            Get Started 
+            Explore all Notes 
         </button>
       </div>
     </div>
