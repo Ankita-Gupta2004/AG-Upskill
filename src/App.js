@@ -13,6 +13,7 @@ import About from "./components/About";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Planner from "./components/ToDo/Planner";
 import CodingPlatform from "./components/CodingPlatform/CodingPlatform";
+import ResumeBuilder from "./components/Resume/ResumeBuilder";
 
 function App() {
   const notesRef = useRef(null);
@@ -49,6 +50,7 @@ function App() {
         
         <Route path="/pending-tasks" element={<Planner />} />
         <Route path="/codingPlatform" element={<CodingPlatform />} />
+        <Route path="/resume-builder" element={<ResumeBuilder />} />
 
 
         {/* Subject Detail Page Route */}
